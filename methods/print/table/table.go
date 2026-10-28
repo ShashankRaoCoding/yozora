@@ -9,5 +9,6 @@ func init() {
 }
 
 func table(_ []string) {
-	// write table with csv
+	// csvData := io.ReadAll(os.Stdin)
+	// print with ASCII table
 }
