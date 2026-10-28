@@ -1,3 +1,3 @@
-package main
+package methods
 
 var Methods map[string]func([]string)

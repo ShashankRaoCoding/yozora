@@ -4,13 +4,13 @@ import (
 	"log"
 	"os"
 
-	yozoraMethods "github.com/ShashankRaoCoding/yozora/methods"
+	methods "github.com/ShashankRaoCoding/yozora/methods"
 )
 
-var printMethods = map[string]func([]string){}
+var Methods = map[string]func([]string){}
 
 func init() {
-	yozoraMethods.Methods["print"] = print
+	methods.Methods["print"] = print
 }
 
 func print(args []string) {
@@ -20,7 +20,7 @@ func print(args []string) {
 	}
 
 	m, args := args[0], args[1:]
-	f, o := methods.Methods[m]
+	f, o := Methods[m]
 	if o {
 		f(args)
 	} else {
