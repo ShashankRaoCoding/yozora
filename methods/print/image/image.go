@@ -1,4 +1,4 @@
-package main
+package image
 
 import (
 	"github.com/ShashankRaoCoding/yozora/methods/print"

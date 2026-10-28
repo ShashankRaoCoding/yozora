@@ -1,4 +1,4 @@
-package main
+package table
 
 import (
 	print "github.com/ShashankRaoCoding/yozora/methods/print"
