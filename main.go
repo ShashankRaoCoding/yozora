@@ -1,25 +1,41 @@
 package main
 
 import (
-	"log"
+	"fmt"
 	"os"
+	"sort"
 
 	"github.com/ShashankRaoCoding/yozora/methods"
+
+	// Register methods and their sub-methods via init().
+	_ "github.com/ShashankRaoCoding/yozora/methods/convert"
+	_ "github.com/ShashankRaoCoding/yozora/methods/convert/formats"
+	_ "github.com/ShashankRaoCoding/yozora/methods/print"
+	_ "github.com/ShashankRaoCoding/yozora/methods/print/image"
+	_ "github.com/ShashankRaoCoding/yozora/methods/print/table"
 )
 
 func main() {
 	args := os.Args[1:]
 	if len(args) < 1 {
-		log.Println("Error: no method specified")
+		fmt.Fprintln(os.Stderr, "Error: no method specified; available:", names())
 		os.Exit(1)
 	}
 
 	m, args := args[0], args[1:]
-	f, o := methods.Methods[m]
-	if o {
+	if f, ok := methods.Methods[m]; ok {
 		f(args)
-	} else {
-		log.Println("Error: unconfigured method")
-		os.Exit(1)
+		return
 	}
+	fmt.Fprintln(os.Stderr, "Error: unconfigured method; available:", names())
+	os.Exit(1)
+}
+
+func names() []string {
+	var n []string
+	for k := range methods.Methods {
+		n = append(n, k)
+	}
+	sort.Strings(n)
+	return n
 }
