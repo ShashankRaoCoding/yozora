@@ -13,6 +13,7 @@ import (
 	_ "github.com/ShashankRaoCoding/yozora/methods/print"
 	_ "github.com/ShashankRaoCoding/yozora/methods/print/image"
 	_ "github.com/ShashankRaoCoding/yozora/methods/print/table"
+	_ "github.com/ShashankRaoCoding/yozora/methods/table"
 )
 
 func main() {
