@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yozora"
+version = "0.1.4"
+description = "yozora, distributed as a prebuilt binary"
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.scripts]
+yzr = "yozora.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+yozora = ["bin/*"]
