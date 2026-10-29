@@ -11,6 +11,7 @@ import (
 	_ "github.com/ShashankRaoCoding/yozora/methods/convert"
 	_ "github.com/ShashankRaoCoding/yozora/methods/convert/formats"
 	_ "github.com/ShashankRaoCoding/yozora/methods/create"
+	_ "github.com/ShashankRaoCoding/yozora/methods/ensure"
 	_ "github.com/ShashankRaoCoding/yozora/methods/ls"
 	_ "github.com/ShashankRaoCoding/yozora/methods/print"
 	_ "github.com/ShashankRaoCoding/yozora/methods/print/image"
