@@ -16,7 +16,7 @@ import (
 	_ "github.com/ShashankRaoCoding/yozora/methods/print"
 	_ "github.com/ShashankRaoCoding/yozora/methods/print/image"
 	_ "github.com/ShashankRaoCoding/yozora/methods/print/table"
-	_ "github.com/ShashankRaoCoding/yozora/methods/table"
+	_ "github.com/ShashankRaoCoding/yozora/methods/sql"
 )
 
 func main() {
