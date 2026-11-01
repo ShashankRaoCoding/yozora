@@ -3,3 +3,7 @@ package methods
 
 // Methods maps a command name (e.g. "print") to its entry point.
 var Methods = map[string]func([]string){}
+
+func init() {
+
+}
